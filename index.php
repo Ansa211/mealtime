@@ -10,7 +10,7 @@
 </head>
 
 <body style='background-color: #f4f4f4'>
-    <h1>Call for Menza</h1>
+    <h1>It's mealtime!</h1>
     <?php
     include 'src/raw.php';
     
@@ -28,11 +28,11 @@
 
     <br>
     <div>
-        Made by Vilda with the help of others from MS.
+        Mealtime is Anša's fork of the CfM project, made by Vilda with the help of others from MS.
     </div>
     
     <div style='font-weight: bold;'>
-        <a href="https://github.com/zouharvi/cfm">About/GitHub</a>, <a href="statistics.php">Statistics</a>
+        <a href="https://github.com/Ansa211/mealtime">GitHub</a>, <a href="statistics.php">Statistics</a>
     </div>
 </body>
 </html>
