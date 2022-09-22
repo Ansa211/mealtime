@@ -1,11 +1,11 @@
 <html>
 <head>
-    <title>Call for Menza</title>
+    <title>Mealtime</title>
     <link rel="shortcut icon" href="https://ufal.mff.cuni.cz/sites/all/themes/drufal/ico/favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400" media="all">
     <style>
         * { font-family: Roboto; }
-        a { color: black; text-decoration: none; }
+        a { text-decoration: none; }
     </style>
 </head>
 
@@ -19,7 +19,7 @@
     }
 
     foreach($response as $place) {
-        echo '<h3><a href="' . $place['href'] . '">' . $place['name'] . '</a></h3>';
+        echo '<h3 style="background-color: yellow"><a href="' . $place['href'] . '">' . $place['name'] . '</a></h3>';
         $menu = $place['menu'];
         $menu = str_replace("\n", '<br>', $menu);
         echo '<p>' . $menu . '</p>';
@@ -32,7 +32,7 @@
     </div>
     
     <div style='font-weight: bold;'>
-        <a href="https://github.com/Ansa211/mealtime">GitHub</a>, <a href="statistics.php">Statistics</a>
+        <a href="https://github.com/Ansa211/mealtime">GitHub</a><!--, <a href="statistics.php">Statistics</a>-->
     </div>
 </body>
 </html>

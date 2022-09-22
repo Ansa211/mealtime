@@ -3,6 +3,7 @@
 /* Normalizes dayOfWeek to 0 - Mon, 6 - Sun
  * Add +7 because PHP mod is broken on negative numbers
  */
+$date=date('d-m-Y');
 $dayOfWeek = (date('w')-1 + 7) % 7;
 $isWeekend = ($dayOfWeek > 4);
 $dayOfWeek = min($dayOfWeek, 4);
@@ -32,54 +33,34 @@ foreach (glob("src/places/*.php") as $filename) {
     include $filename;
 }
 
-// bump up the daily counter
-include 'counter.php';
+// // bump up the daily counter
+// include 'counter.php';
 
 $places = array(
     array(
-        'func' => 'ananta',
-        'name' => 'Ananta 🌿',
-        'href' => 'http://www.anantasesa.cz/tydenni-menu',
+        'func' => 'malinova',
+        'name' => 'Restaurace v Malinové (11:00-14:00)',
+        'href' => 'http://restauracevmalinove/denni-menu/',
     ),
     array(
-        'func' => 'natureza',
-        'name' => 'Natureza 🌿',
-        'href' => 'https://naturezaveget.cz/poledni-menu/noonmenu/7/1',
+        'func' => 'usvehly',
+        'name' => 'U Švehly (11:00-15:00)',
+        'href' => 'http://www.u-svehly.cz/denni-menu-'. $date,
     ),
     array(
-        'func' => 'profdum',
-        'name' => 'Profesní dům',
-        'href' => 'https://www.profesnidum.cz/daily-menu.htm',
+        'func' => 'allegria',
+        'name' => 'Pizzeria Allegria (11:00-15:00)',
+        'href' => 'https://pizzeriaallegria.cz/',
     ),
     array(
-        'func' => 'menza_prava',
-        'name' => 'Právnická fakulta',
-        'href' => 'https://kamweb.ruk.cuni.cz/webkredit/',
+        'func' => 'kotelna',
+        'name' => 'Kotelna',
+        'href' => 'https://restauracekotelna.cz/',
     ),
     array(
-        'func' => 'menza_arnost',
-        'name' => 'Arnošta z Pardubic',
-        'href' => 'https://kamweb.ruk.cuni.cz/webkredit/',
-    ),
-    array(
-        'func' => 'ferdinanda',
-        'name' => 'Ferdinanda',
-        'href' => 'http://ferdinanda.cz/cs/mala-strana/menu/denni-menu',
-    ),
-    array(
-        'func' => 'hamu',
-        'name' => 'Hamu',
-        'href' => 'https://www.hamu.cz/cs/vse-o-fakulte/fakultni-kavarna/',
-    ),
-    array(
-        'func' => 'carmelita',
-        'name' => 'Carmelita',
-        'href' => 'http://www.restauracecarmelita.cz/',
-    ),
-    array(
-        'func' => 'cantina',
-        'name' => 'Cantina',
-        'href' => 'http://www.restauracecantina.cz/',
+        'func' => 'topolova',
+        'name' => 'Rezidence Topolová',
+        'href' => 'https://www.restauracetopolova.cz/denni-menu/',
     ),
 );
 $response = array();
